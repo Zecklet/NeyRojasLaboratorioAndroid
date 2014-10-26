@@ -17,5 +17,16 @@
     <string name="btnSubirImagen">Imagen</string>
     <string name="btnEnviar">Enviar</string>
     <string name="title_activity_agregar_platillo">AgregarPlatillo</string>
+    <string name="title_activity_consultar">Consultar</string>
+    <string name="btnLoginFacebook">Login Facebook</string>
+    <string name="app_id">393535750799943</string>
+    <string name="btnLoginTwitter">Login Twitter</string>
+    <string name="lblBienvenido">Bienvenido </string>
+    <string name="lblUsuario">Usuario</string>
+
+
+    <color name="backgroundBuscar">#ff5facff</color>
+    <color name="backgroundBlanco">#ffffffff</color>
+    <color name="ColorTitulo">#ffffb020</color>
 
 </resources>

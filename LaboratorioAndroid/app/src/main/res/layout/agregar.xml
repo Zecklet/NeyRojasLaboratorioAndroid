@@ -1,154 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:scrollbarAlwaysDrawVerticalTrack="true">
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/titAgregar"
-        android:id="@+id/textView"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="20dp" />
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:textAlignment="center"
-        android:weightSum="1"
-        android:gravity="left">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/titPlatillo"
-            android:id="@+id/textView2"
-            android:layout_margin="10dp"
-            android:layout_marginLeft="25dp" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="51dp"
-            android:id="@+id/txtNombre"
-            android:layout_margin="10dp"
-            android:inputType="text" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:textAlignment="center"
-        android:weightSum="1"
-        android:id="@+id/linearLayout"
-        android:gravity="left">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/titPais"
-            android:id="@+id/textView3"
-            android:layout_margin="10dp"
-            android:layout_marginLeft="0dp" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="51dp"
-            android:id="@+id/txtPais"
-            android:layout_margin="10dp"
-            android:inputType="text" />
-    </LinearLayout>
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:textAlignment="center"
-        android:weightSum="1"
-        android:id="@+id/linearLayout3"
-        android:gravity="left">
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/titDescripcion"
-            android:id="@+id/textView5"
-            android:layout_margin="10dp"
-            android:layout_marginTop="25dp" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/titAgregar"
+            android:id="@+id/textView"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp" />
 
-        <EditText
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textMultiLine"
-            android:ems="10"
-            android:id="@+id/txtDescripcion"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_vertical"
+            android:textAlignment="center"
+            android:weightSum="1"
+            android:gravity="left">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/titPlatillo"
+                android:id="@+id/textView2"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="25dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:id="@+id/txtNombre"
+                android:layout_margin="10dp"
+                android:inputType="text" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:weightSum="1"
+            android:id="@+id/linearLayout"
+            android:gravity="left">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/titPais"
+                android:id="@+id/textView3"
+                android:layout_margin="20dp" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/spPaises"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1" />
+
+            <com.parse.ParseImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/imPaisAgregar"
+                android:src="@drawable/ic_launcher"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:weightSum="1"
+            android:id="@+id/linearLayout3"
+            android:gravity="left">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/titDescripcion"
+                android:id="@+id/textView5"
+                android:layout_margin="10dp"
+                android:layout_marginTop="25dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/txtDescripcion"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right"
+            android:textAlignment="center"
+            android:weightSum="1"
+            android:id="@+id/linearLayout4"
+            android:gravity="left">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/titSubirImagen"
+                android:id="@+id/textView6"
+                android:layout_margin="10dp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/btnSubirImagen"
+                android:id="@+id/btnImage"
+                android:layout_margin="10dp"
+                android:layout_weight="0.78"
+                android:onClick="ObtenerFoto" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@+id/imSubir"
+                android:src="@drawable/ic_launcher"
+                android:layout_margin="25dp"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btnEnviar"
+                android:id="@+id/btnEnviar"
+                android:layout_gravity="bottom"
+                android:onClick="onClickEnviar"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="225dp"/>
+
+        </RelativeLayout>
     </LinearLayout>
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center|right"
-        android:textAlignment="center"
-        android:weightSum="1"
-        android:id="@+id/linearLayout4"
-        android:gravity="left">
+        android:layout_margin="150dp"
+        android:layout_alignParentStart="true" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/titSubirImagen"
-            android:id="@+id/textView6"
-            android:layout_margin="10dp" />
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/btnSubirImagen"
-            android:id="@+id/btnImage"
-            android:layout_margin="10dp"
-            android:layout_weight="0.78"
-            android:onClick="ObtenerFoto" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:weightSum="1"
-        android:gravity="center|center_horizontal">
-
-        <ImageView
-            android:layout_width="103dp"
-            android:layout_height="130dp"
-            android:id="@+id/imSubir"
-            android:src="@drawable/ic_launcher"
-            android:layout_margin="25dp"
-            android:layout_weight="0.26" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/btnEnviar"
-            android:id="@+id/btnEnviar"
-            android:layout_gravity="bottom"
-            android:onClick="onClickEnviar"
-            android:layout_marginTop="0dp" />
-    </LinearLayout>
-
-</LinearLayout>
+</RelativeLayout>

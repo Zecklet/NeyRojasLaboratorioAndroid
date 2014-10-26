@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnAgregar"
+        android:id="@+id/btnIrAgregar"
+        android:layout_marginLeft="48dp"
+        android:layout_marginBottom="82dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:onClick="CargarContextoAgregar" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnConsultar"
+        android:id="@+id/btnIrConsultar"
+        android:layout_marginRight="45dp"
+        android:singleLine="false"
+        android:layout_alignTop="@+id/btnIrAgregar"
+        android:layout_alignParentEnd="true"
+        android:onClick="CargarContextoConsulta" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/lblBienvenido"
+            android:id="@+id/lblBienvenido"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/btnIrAgregar"
+            android:singleLine="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/lblUsuario"
+            android:id="@+id/lblNombreUsuario"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+    </LinearLayout>
+
+</RelativeLayout>

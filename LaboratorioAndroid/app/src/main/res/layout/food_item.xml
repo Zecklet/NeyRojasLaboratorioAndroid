@@ -1,33 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <com.parse.ParseImageView
+        android:id="@+id/icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dip"
+        android:visibility="visible"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_launcher"
+        />
+
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
-        <com.parse.ParseImageView
-            android:id="@+id/icon"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="15dip"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="120dp">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
             android:visibility="visible"
-            android:src="@drawable/ic_launcher" />
+            android:text="Nombre"
+            android:layout_toEndOf="@+id/icon"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentEnd="true" />
+
         <TextView
             android:id="@+id/type"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/icon"
-            android:layout_toRightOf="@id/icon"
-            android:textColor="#ff3d3d3d"
-            android:textSize="32sp"
+            android:textSize="15sp"
             android:autoText="false"
             android:visibility="visible"
-            android:text="Nombre" />
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="32sp"
-        android:visibility="visible"
-        android:text="Nombre"
-        android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/type" />
+            android:text="Descripcion"
+            android:layout_toEndOf="@+id/icon"
+            android:textColor="@color/backgroundBuscar"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/name"
+            android:layout_alignStart="@+id/iconBandera"
+            android:layout_marginLeft="25dp"/>
+
+        <com.parse.ParseImageView
+            android:id="@+id/iconBandera"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="50dp"
+            android:visibility="visible"
+            android:src="@drawable/ic_launcher"
+            android:layout_alignTop="@+id/name" />
+    </LinearLayout>
+
+
 </RelativeLayout>
